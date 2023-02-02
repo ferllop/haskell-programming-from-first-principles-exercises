@@ -1,4 +1,5 @@
-fact :: [Integer]
-fact = 1 : scanl (\x accum -> (x + 1) * accum) 1 fact
+fact :: [Int]
+fact = scanl (*) 1 [1..]
 
+factN :: Int -> [Int]
 factN x = take (x+1) $ fact
